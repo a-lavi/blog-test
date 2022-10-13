@@ -137,7 +137,7 @@ function App() {
     console.log(auth.accessToken);
     if (!auth.accessToken) {
       console.log("AAAAAA");
-      navigate("/blog_project/login");
+      navigate("/login");
     } else {
       console.log("bbbbbbbbb");
       await logout();
@@ -184,26 +184,26 @@ function App() {
         <Route path="/" element={<Layout />}>
         <Route
           exact
-          path="/blog_project/view/:gameSlug"
+          path="/view/:gameSlug"
           element={<GameDetails />}
         />
 
           <Route
             exact
-            path="/blog_project"
+            path="/"
             element={<RenderData data={data} />}
           />
 
-          <Route path="/blog_project/test" element={<Album data={data} />} />
+          <Route path="/test" element={<Album data={data} />} />
 
           <Route
-            path="/blog_project/login"
+            path="/login"
             element={<Login /* data={data} loginUsername={loginUsername} */ />}
           />
 
           <Route
             exact
-            path="/blog_project/search"
+            path="/search"
             element={
               <Search
                 search={search}
@@ -215,7 +215,7 @@ function App() {
 
           <Route
             exact
-            path="/blog_project/unauthorized"
+            path="/unauthorized"
             element={<Unauthorized />}
           />
 
@@ -225,7 +225,7 @@ function App() {
             >
               <Route
                 exact
-                path="/blog_project/register"
+                path="/register"
                 element={
                   <Register /* data={data} registerUsername={registerUsername} */
                   />
@@ -234,13 +234,13 @@ function App() {
 
               <Route
                 exact
-                path="/blog_project/add"
+                path="/add"
                 element={<AddGame data={data} addGames={addGames} />}
               />
 
               <Route
                 exact
-                path="/blog_project/edit/:gameid"
+                path="/edit/:gameid"
                 element={
                   <EditPosts
                     data={data}
@@ -251,7 +251,7 @@ function App() {
               />
               <Route
                 exact
-                path="/blog_project/change-password"
+                path="/change-password"
                 element={
                   <ChangePass
                    
@@ -264,10 +264,10 @@ function App() {
 
         <Route
           exact
-          path="/blog_project/contactform"
+          path="/contactform"
           element={<ContactForm />}
         />
-        <Route exact path="/blog_project/aboutus" element={<AboutUs />} />
+        <Route exact path="/aboutus" element={<AboutUs />} />
         {/*  <Route
             <ChangePass data={data} changePassElement={changePassElement} />
           
