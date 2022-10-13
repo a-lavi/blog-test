@@ -29,7 +29,7 @@ function Search({searchResults, searchQuery}) {
                   <Highlighter autoEscape={true} searchWords={[searchQuery]} className="search-text-title" textToHighlight={searchResult.fields.title}/> 
                   <Highlighter autoEscape={true} searchWords={[searchQuery]} className="search-text" textToHighlight={searchResult.fields.richText.content[0].content[0].value}/>
                   <p className="search-Author">Author(s): {searchResult.fields.author}</p>
-                  <a href={`/blog_project/${searchResult.fields.title.replaceAll(" ", "_").toLowerCase()}`}>Read more...</a>
+                  <a href={`/${searchResult.fields.title.replaceAll(" ", "_").toLowerCase()}`}>Read more...</a>
                   
                 </div>
               </div>

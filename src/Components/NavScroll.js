@@ -33,10 +33,10 @@ function NavScroll({ search, setSearchQuery, searchQuery }) {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <LinkContainer to="/blog_project">
+            <LinkContainer to="/">
             <Nav.Link >Home</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/blog_project/aboutus">
+            <LinkContainer to="/aboutus">
             <Nav.Link >About us</Nav.Link>
             </LinkContainer>
             
@@ -47,7 +47,7 @@ function NavScroll({ search, setSearchQuery, searchQuery }) {
               <NavDropdown.Item href="">Party Games</NavDropdown.Item>
               <NavDropdown.Item href="">Strategic</NavDropdown.Item>
             </NavDropdown>
-            <LinkContainer to="/blog_project/contactform">
+            <LinkContainer to="/contactform">
             <Nav.Link >Contact</Nav.Link>
             </LinkContainer>
             
@@ -61,7 +61,7 @@ function NavScroll({ search, setSearchQuery, searchQuery }) {
               aria-label="Search"
               onChange={inputHandler}
             />
-            <Link  to="blog_project/search">
+            <Link  to="/search">
               <Button
                 type="submit"
                 onClick={search}

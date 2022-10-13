@@ -107,7 +107,7 @@ export default function Album({data}) {
                   </CardContent>
                   <CardActions>
                   <Button size="small">View</Button>
-                  <Link href={`/blog_project/edit/${card.id}`}>
+                  <Link href={`/edit/${card.id}`}>
                     
                     <Button size="small">Edit</Button>
                     </Link>

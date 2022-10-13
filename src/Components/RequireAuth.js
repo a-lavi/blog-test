@@ -19,8 +19,8 @@ console.log('here is the auth user',auth.username)
         auth?.roles?.find(role => allowedRoles?.includes(role))
             ? <Outlet />
             : auth?.username
-                ? <Navigate to="/blog_project/unauthorized" state={{ from: location }} replace />
-                : <Navigate to="/blog_project/login" state={{ from: location }} replace />
+                ? <Navigate to="/unauthorized" state={{ from: location }} replace />
+                : <Navigate to="/login" state={{ from: location }} replace />
     );
 }
 export default RequireAuth;

@@ -31,7 +31,7 @@ console.log(auth)
     deleteGames({ id: gameid,
       accessToken:auth.accessToken,
       roles: auth.roles });
-    history("/blog_project");
+    history("/");
   }
 
   function handleUpdateGame() {
